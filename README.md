@@ -10,7 +10,8 @@ The data sent to the StatsD server tries to be roughly equivalent to the [Indice
 
 | Elasticsearch  | Plugin         | Release date |
 | -------------- | -------------- | ------------ |
-| 7.9.3          | 7.9.3.0        | Oct 28, 2020 |
+| 7.10.0         | 7.10.0         |              |
+| 7.9.3          | 7.9.3.0        | Oct 27, 2020 | 
 | 7.8.1          | 7.8.1.0        | Aug 10, 2020 |
 | 7.5.1          | 7.5.1.0        | Mar 19, 2020 |
 | 7.0.0          | 7.0.0.0        | Jan 7,  2019 |
@@ -100,12 +101,12 @@ The plugin artifacts are published to Maven Central and Github. To install a pre
 From Github:
 
 ```
-./bin/elasticsearch-plugin install https://github.com/Automattic/elasticsearch-statsd-plugin/releases/download/7.9.3.0/elasticsearch-statsd-7.9.3.0.zip
+./bin/elasticsearch-plugin install https://github.com/Automattic/elasticsearch-statsd-plugin/releases/download/7.8.1.0/elasticsearch-statsd-7.8.1.0.zip
 ```
 
 From Maven Central:
 ```
-./bin/elasticsearch-plugin install http://repo1.maven.org/maven2/com/automattic/elasticsearch-statsd/7.9.3.0/elasticsearch-statsd-7.9.3.0.zip
+./bin/elasticsearch-plugin install http://repo1.maven.org/maven2/com/automattic/elasticsearch-statsd/7.8.1.0/elasticsearch-statsd-7.8.1.0.zip
 ```
 
 Change the version to match your ES version. For ES `x.y.z` the version is `x.y.z.0`
@@ -121,7 +122,7 @@ mvn clean package -Djava.security.policy=src/test/resources/plugin-security-test
 Once we have the artifact, install it with the following command:
 
 ```
-bin/elasticsearch-plugin install file:///absolute/path/to/current/dir/target/releases/elasticsearch-statsd-7.9.3.0.zip
+bin/elasticsearch-plugin install file:///absolute/path/to/current/dir/target/releases/elasticsearch-statsd-7.8.1.0.zip
 ```
 
 ## Installation Elasticsearch 5.x
