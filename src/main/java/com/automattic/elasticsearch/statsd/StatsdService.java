@@ -118,6 +118,8 @@ public class StatsdService extends AbstractLifecycleComponent {
         public void run() {
             try {
                 while (!StatsdService.this.closed.get()) {
+                    long startTime = System.currentTimeMillis();
+
                     ClusterState state;
                     try {
                         state = StatsdService.this.clusterService.state();
@@ -212,8 +214,10 @@ public class StatsdService extends AbstractLifecycleComponent {
                         }
                     }
 
+                    long elapsedTime = System.currentTimeMillis() - startTime;
+
                     try {
-                        Thread.sleep(StatsdService.this.statsdRefreshInternal.millis());
+                        Thread.sleep(StatsdService.this.statsdRefreshInternal.millis() - elapsedTime);
                     } catch (InterruptedException e1) {
                         continue;
                     }
